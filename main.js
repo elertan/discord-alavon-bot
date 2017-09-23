@@ -37,18 +37,33 @@ client.on('message', msg => {
 		switch (msg.content.toUpperCase()) {
 			case "EUW":
 				removeRolesForMember(msg.member, roles);
-				msg.reply("EUW > NA right? ; )");
+				msg.reply("EUW > NA right? ; )").then(function (m) {
+					setTimeout(function () {
+						m.delete();
+					}, 3000);
+				});
 				msg.member.addRole(euwRole);
+				msg.delete();
 				break;
 			case "NA":
 				removeRolesForMember(msg.member, roles);
-				msg.reply("Pfft.. Come join euw already!");
+				msg.reply("Pfft.. Come join euw already!").then(function (m) {
+					setTimeout(function () {
+						m.delete();
+					}, 3000);
+				});
 				msg.member.addRole(naRole);
+				msg.delete();
 				break;
 			case "EUNE":
 				removeRolesForMember(msg.member, roles);
-				msg.reply("Yes sir! PS Try out EUW sometime, much better :P (Only people like Liv play on that server)");
+				msg.reply("Yes sir! PS Try out EUW sometime, much better :P (Only people like Liv play on that server)").then(function (m) {
+					setTimeout(function () {
+						m.delete();
+					}, 3000);
+				});
 				msg.member.addRole(euneRole);
+				msg.delete();
 				break;
 		}
 	}
