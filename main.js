@@ -17,8 +17,12 @@ client.on('message', msg => {
 			case "help":
 				msg.reply("Don't ask for help, ask for nudes!\n"
 					+ "Here is a list of available commands:\n"
+						+ commandPrefix + "about\n"
 						+ commandPrefix + "set-regional-groupings-channel {channelname}\n"
 						+ commandPrefix + "show-settings\n");
+				break;
+			case "about":
+				msg.reply("Developed by Alavon. Here is my website! https://www.alavon.nl/");
 				break;
 			case "show-settings":
 				msg.reply("These are the current settings:\n" + JSON.stringify(settings));
