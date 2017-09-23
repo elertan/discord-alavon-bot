@@ -43,7 +43,6 @@ client.on('message', msg => {
 					}, 3000);
 				});
 				msg.member.addRole(euwRole);
-				msg.delete();
 				break;
 			case "NA":
 				removeRolesForMember(msg.member, roles);
@@ -53,7 +52,6 @@ client.on('message', msg => {
 					}, 3000);
 				});
 				msg.member.addRole(naRole);
-				msg.delete();
 				break;
 			case "EUNE":
 				removeRolesForMember(msg.member, roles);
@@ -63,10 +61,10 @@ client.on('message', msg => {
 					}, 3000);
 				});
 				msg.member.addRole(euneRole);
-				msg.delete();
 				break;
 		}
 	}
+	msg.delete();
 });
 
 client.login('MzYxMTk1NDM3NDkyNzk3NDQw.DKglFA.KCD6yftIZ1MwlDXWOQjCZQJZB8Y');
