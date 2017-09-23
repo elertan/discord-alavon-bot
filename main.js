@@ -63,8 +63,8 @@ client.on('message', msg => {
 				msg.member.addRole(euneRole);
 				break;
 		}
+		msg.delete();
 	}
-	msg.delete();
 });
 
 client.login('MzYxMTk1NDM3NDkyNzk3NDQw.DKglFA.KCD6yftIZ1MwlDXWOQjCZQJZB8Y');
